@@ -1,0 +1,119 @@
+%%Problem 3.4.28 Part A
+%%Amie Demmel
+%
+%%This is matlab session implements the classic gram-schmidt (gs.m) on 
+%hilbert of various sizes then tests the accuracy of the method
+
+gs
+enter matrix : hilb(3)
+norm(eye(3)-V'*V,2)
+
+ans =
+
+   1.2230e-14
+
+norm(V1-V*r,2)
+
+ans =
+
+     0
+
+gs
+enter matrix : hilb(4)
+norm(eye(4)-V'*V,2)
+
+ans =
+
+   2.9767e-13
+
+norm(V1-V*r,2)
+
+ans =
+
+   5.5511e-17
+
+gs
+enter matrix : hilb(5)
+norm(eye(5)-V'*V,2)
+
+ans =
+
+   1.1211e-11
+
+norm(V1-V*r,2)
+
+ans =
+
+   6.2063e-17
+
+gs
+enter matrix : hilb(6)
+norm(eye(6)-V'*V,2)
+
+ans =
+
+   8.5468e-11
+
+norm(V1-V*r,2)
+
+ans =
+
+   8.3704e-17
+
+gs
+enter matrix : hilb(7)
+norm(eye(7)-V'*V,2)
+
+ans =
+
+   1.9270e-08
+
+norm(V1-V*r,2)
+
+ans =
+
+   4.8401e-17
+
+gs
+enter matrix : hilb(8)
+norm(eye(8)-V'*V,2)
+
+ans =
+
+   4.2094e-07
+
+norm(V1-V*r,2)
+
+ans =
+
+   8.5804e-17
+
+gs
+enter matrix : hilb(9)
+norm(eye(9)-V'*V,2)
+
+ans =
+
+   5.2069e-06
+
+norm(V1-V*r,2)
+
+ans =
+
+   7.4129e-17
+
+gs
+enter matrix : hilb(10)
+norm(eye(10)-V'*V,2)
+
+ans =
+
+   3.2012e-04
+
+norm(V1-V*r,2)
+
+ans =
+
+   7.6897e-17
+
+diary off

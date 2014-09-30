@@ -1,0 +1,46 @@
+%Problem 8.2.14
+%Amie Demmel
+%
+%Apply my gauss-seidel algorithm to test system; converged with half of the %steps required for Jacobi
+
+GuassSeidel
+enter the A matrix of the system : [5 2 1 1;2 6 2 1; 1 2 7 2; 1 1 2 8]
+enter the b vector of the system : [29; 31; 26; 19]
+enter inital guess of x : [0;0;0;0]
+
+step =
+
+     5
+
+
+soln =
+
+   4.001305629040125
+   2.999285067091959
+   1.999897089096966
+   0.999951890709248
+
+
+ans =
+
+   0.005393904605886
+
+
+step =
+
+     9
+
+
+soln =
+
+   4.000000104281137
+   2.999999535401187
+   2.000000231545240
+   0.999999987153400
+
+
+ans =
+
+     2.271719177380486e-06
+
+diary off

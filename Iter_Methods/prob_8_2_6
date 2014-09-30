@@ -1,0 +1,73 @@
+%Problem 8.2.6
+%Amie Demmel
+%
+%This is the output of the jacobi algorithm run for 30 iterations for the model problem
+jacobi2
+enter the A matrix of the system : [5 2 1 1;2 6 2 1; 1 2 7 2; 1 1 2 8]
+enter the b vector of the system : [29; 31; 26; 19]
+enter inital guess of x : zeros(4,1)
+
+step =
+
+    10
+
+
+soln =
+
+   3.901716645769416
+   2.899394872322742
+   1.914371288778095
+   0.935383972585067
+
+
+ans =
+
+   1.904683876053549
+
+
+step =
+
+    20
+
+
+soln =
+
+   3.996534313890057
+   2.996448680196716
+   1.996980359311677
+   0.997719778515109
+
+
+ans =
+
+   0.067195858501014
+
+
+step =
+
+    30
+
+
+soln =
+
+   3.999877734083409
+   2.999874712351154
+   1.999893470085126
+   0.999919555779076
+
+
+ans =
+
+   0.002370607952438
+
+%also if there is a zero diagonal entry the program will not calculate and exit
+jacobi2
+enter the A matrix of the system : [0 1; 9 4]
+enter the b vector of the system : [1 1];
+enter inital guess of x : [0 0]'
+
+error =
+
+Zero Diagonal Entry not allowed!
+
+diary off

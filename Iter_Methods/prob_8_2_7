@@ -1,0 +1,71 @@
+%Problem 8.2.7
+%Amie Demmel
+%
+%Apply the jacobi script to solve A matrix and check how well it solves
+
+jacobi2
+enter the A matrix of the system : [5 1 1;1 4 1; 1 1 3]
+enter the b vector of the system : [10 12 12]'
+enter inital guess of x : [0 0 0]'
+
+step =
+
+    10
+
+
+soln =
+
+   0.997856296296296
+   1.997496296296296
+   2.996985185185185
+
+
+ans =
+
+   0.026102456269854
+
+
+step =
+
+    20
+
+
+soln =
+
+   0.999997209103978
+   1.999996739528120
+   2.999996079941472
+
+
+ans =
+
+     3.397226104945214e-05
+
+
+step =
+
+    22
+
+
+soln =
+
+   0.999999261027746
+   1.999999136692821
+   2.999998962051760
+
+
+ans =
+
+     8.995154795037693e-06
+
+b-A*x
+
+ans =
+
+   1.0e-05 *
+
+   0.559611669004312
+   0.523014920972287
+   0.471612415253730
+
+diary off

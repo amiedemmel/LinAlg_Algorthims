@@ -1,0 +1,36 @@
+%Prob_6_4_24
+%Amie Demmel
+%4/23/14
+%%
+%This matlab session explores how reduction to upper Hessenberg can cause 
+%fill-in on a large sparse matrix
+load west0479
+A = west0479;
+nnza = nnz(A)
+
+nnza =
+
+        1887
+
+spy(A)
+H = hess(full(A)); %hess operates on full matrices
+nnzh = nnz(H)
+
+nnzh =
+
+      115426
+
+spy(H)
+%Now we will use QR decomp of A and compute set A equal to RQ (essentially 
+%an iteration of QR algorithm)
+[Q,R]=qr(A);
+A = R*Q;
+spy(A)
+nnza = nnz(A)
+
+nnza =
+
+      188429
+
+spy(A)
+diary off

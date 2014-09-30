@@ -1,0 +1,234 @@
+%Problem 8.2.23
+%Amie Demmel
+%Use SOR for model problem 8.1.8
+%Using SOR with mesh size of 1/80 and 1/160 and then w = 1, 1.5, 1.8, 1.9, %1.95, 1.97, 1.98
+
+sorex
+relaxation factor : 1
+mesh size : 1/80
+
+step =
+
+        7368
+
+
+tol_tester =
+
+     9.995576025729745e-09
+
+
+sorex
+relaxation factor : 1.5
+mesh size : 1/80
+
+step =
+
+        2707
+
+
+tol_tester =
+
+     9.998891715980844e-09
+
+
+sorex
+relaxation factor : 1.8
+mesh size : 1/80
+
+step =
+
+   978
+
+
+tol_tester =
+
+     9.989184387152075e-09
+
+sorex
+relaxation factor : 1.9
+mesh size : 1/80
+
+step =
+
+   449
+
+
+tol_tester =
+
+     9.933204161469433e-09
+
+sorex
+relaxation factor : 1.95
+mesh size : 1/80
+
+step =
+
+   348
+
+
+tol_tester =
+
+     9.747708866577442e-09
+
+sorex
+relaxation factor : 1.97
+mesh size : 1/80
+
+step =
+
+   563
+
+
+tol_tester =
+
+     9.667610386419389e-09
+
+sorex
+relaxation factor : 1.98
+mesh size : 1/80
+
+step =
+
+   826
+
+
+tol_tester =
+
+     9.802872942541663e-09
+
+sorex
+relaxation factor : 1
+mesh size : 1/160
+
+step =
+
+       25843
+
+
+tol_tester =
+
+     9.999801713789590e-09
+
+sorex
+relaxation factor : 1.5
+mesh size : 1/160
+
+step =
+
+        9600
+
+
+tol_tester =
+
+     9.995777234427496e-09
+
+sorex
+relaxation factor : 1.8
+mesh size : 1/160
+
+step =
+
+        3538
+
+
+tol_tester =
+
+     9.965957895863919e-09
+
+sorex
+relaxation factor : 1.9
+mesh size : 1/160
+
+step =
+
+        1768
+
+
+tol_tester =
+
+     9.945095063098010e-09
+
+sorex
+relaxation factor : 1.95
+mesh size : 1/160
+
+step =
+
+   832
+
+
+tol_tester =
+
+     9.862307773315754e-09
+
+sorex
+relaxation factor : 1.97
+mesh size : 1/160
+
+step =
+
+   642
+
+
+tol_tester =
+
+     8.740117864042398e-09
+
+sorex
+relaxation factor : 1.98
+mesh size : 1/160
+
+step =
+
+   824
+
+
+tol_tester =
+
+     8.896170768163154e-09
+
+%To show that the code indeed sets up u and fills in u apprieately, show the small case of h = 1/2, n =3 only 1 step
+
+sorex
+relaxation factor : 1.8
+mesh size : 1/2
+
+u =
+
+                   0                   0                   0
+  -0.239712769302102                   0   0.750000000000000
+                   0   0.500000000000000   1.000000000000000
+
+
+overflow =
+
+     1
+
+
+nu =
+
+   0.252571807674475
+
+
+d =
+
+   0.252571807674475
+
+
+u =
+
+                   0                   0                   0
+  -0.239712769302102   0.454629253814054   0.750000000000000
+                   0   0.500000000000000   1.000000000000000
+
+
+step =
+
+     1
+
+
+tol_tester =
+
+   0.318436848235977
+
+diary off

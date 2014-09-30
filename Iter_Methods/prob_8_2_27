@@ -1,0 +1,44 @@
+%Problem 8.2.27
+%Amie Demmel
+%
+%Matlab session explores the smoothness of the Guass-Seidel convergence
+
+%Set up T matrix
+r = [2 -1 0 0 0 0 0 0 0 0];
+c = [2 -1 0 0 0 0 0 0 0 0];
+T = toeplitz(c,r)
+
+T =
+
+     2    -1     0     0     0     0     0     0     0     0
+    -1     2    -1     0     0     0     0     0     0     0
+     0    -1     2    -1     0     0     0     0     0     0
+     0     0    -1     2    -1     0     0     0     0     0
+     0     0     0    -1     2    -1     0     0     0     0
+     0     0     0     0    -1     2    -1     0     0     0
+     0     0     0     0     0    -1     2    -1     0     0
+     0     0     0     0     0     0    -1     2    -1     0
+     0     0     0     0     0     0     0    -1     2    -1
+     0     0     0     0     0     0     0     0    -1     2
+
+%Just slightly modified Gauss-Siedel script so that the solutions are 
+%written to a vector so error can be computed below
+prob_27_script
+enter the A matrix of the system : T
+enter the b vector of the system : [2 -2 2 -1 0 0 1 -2 2 -2]'
+enter inital guess of x : zeros(10,1)prob_27_script
+enter the A matrix of the system : T
+enter the b vector of the system : [2 -2 2 -1 0 0 1 -2 2 -2]'
+enter inital guess of x : zeros(10,1)
+
+%true solution
+x = [1 0 1 0 0 0 0 -1 0 -1]'
+
+%find the error between the true solution and calculated solutions
+for i=1:30
+e(:,i) = x - soln(:,i);
+end
+
+%graphs the first ten interation errors for each x entry
+plot(e(:,1:10))
+diary off
