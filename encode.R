@@ -1,3 +1,7 @@
+%Encoder.R
+%Amie Demmel
+
+%String to convert char to numbers
 L <- c(" ",'a','b','c','d','e','f','g','h','i',
 		 'j','k','l','m','n','o','p','q','r','s',
 		 't','u','v','w','x','y','z','A','B','C',
@@ -7,6 +11,7 @@ L <- c(" ",'a','b','c','d','e','f','g','h','i',
 		 '}','(',')','1','2','3','4','5','6','7',
 		 '8','9','0')
 
+%Function to take number and put back into letter form
 letter <- function(x) {
 	n <- length(x)
 	x <- x+1
@@ -19,6 +24,7 @@ letter <- function(x) {
 	return(lett)
 }
 
+%Function to take char and put into number form
 number <- function(x) {
 	n <- length(x)
 	num <- rep(0,n)
@@ -31,6 +37,7 @@ number <- function(x) {
 	return(num)
 }
 
+%Code which puts a message into a matrix and then multiplys it by the key so it is encrypted
 code <- function(x,key=matrix(c(2,4,1,3),2,2)) {
 	x <- strsplit(x, NULL)
 	x <- x[[1]]
@@ -52,6 +59,7 @@ code <- function(x,key=matrix(c(2,4,1,3),2,2)) {
 	return(M)
 }
 
+%Code to decode a number string into a message
 breaker <- function(x,key=matrix(c(2,4,1,3),2,2)) {
 	n <- length(x)
 	
